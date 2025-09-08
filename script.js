@@ -246,7 +246,7 @@ loadGameState();
 
 // Copy contract address function
 function copyContract() {
-    const fullAddress = '0x1234567890ABCDEF1234567890ABCDEF12345678';
+    const fullAddress = 'GnTA7TAZfT2mE3kH5F3K6CGzv41ypg2uAfQtiaXrpump';
     
     navigator.clipboard.writeText(fullAddress).then(() => {
         const copyBtn = document.querySelector('.copy-btn');
