@@ -293,6 +293,129 @@ body::before {
 /* Footer */
 .game-footer {
     text-align: center;
+    padding: 30px 20px 20px;
+    color: #2E7D32;
+    font-size: 1rem;
+    margin-top: 30px;
+    border-top: 2px dashed #4CAF50;
+}
+
+.community-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    border: 3px solid #4CAF50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.community-section h3 {
+    font-size: 1.4rem;
+    color: #2E7D32;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.community-links {
+    margin-bottom: 20px;
+}
+
+.community-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #2E7D32;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.community-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #43A047, #4CAF50);
+}
+
+.community-link:active {
+    transform: translateY(0);
+}
+
+.link-icon {
+    font-size: 1.2rem;
+}
+
+.contract-section {
+    margin-top: 20px;
+}
+
+.contract-section h4 {
+    font-size: 1.2rem;
+    color: #2E7D32;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contract-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.contract-address {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: #2E7D32;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 12px;
+    border-radius: 15px;
+    border: 2px solid #4CAF50;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #4CAF50;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copy-btn:hover {
+    background: #43A047;
+    transform: scale(1.1);
+}
+
+.copy-btn:active {
+    transform: scale(0.9);
+}
+
+.copy-btn.copied {
+    background: #66BB6A;
+    animation: bounce 0.5s ease;
+}
+
+.verify-text {
+    font-size: 0.9rem;
+    color: #43A047;
+    font-weight: bold;
+    margin: 0;
+}
+
+.footer-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .milestone-section {
@@ -461,6 +584,34 @@ body::before {
         font-size: 0.8rem;
         padding: 6px 10px;
     }
+    
+    .community-section {
+        padding: 15px;
+        margin: 10px 5px;
+    }
+    
+    .community-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .community-link {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+    
+    .contract-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .contract-address {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    
+    .copy-btn {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 320px) {
@@ -484,6 +635,38 @@ body::before {
     
     .score-number {
         font-size: 1.4rem;
+    }
+    
+    .community-section {
+        padding: 12px;
+        margin: 8px 3px;
+    }
+    
+    .community-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .community-link {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+    
+    .contract-section h4 {
+        font-size: 1rem;
+    }
+    
+    .contract-address {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .copy-btn {
+        padding: 4px 6px;
+        font-size: 0.8rem;
+    }
+    
+    .verify-text {
+        font-size: 0.8rem;
     }
 }
 
