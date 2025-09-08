@@ -244,6 +244,36 @@ setInterval(saveGameState, 5000);
 // Load saved state on startup
 loadGameState();
 
+// Copy contract address function
+function copyContract() {
+    const fullAddress = '0x1234567890ABCDEF1234567890ABCDEF12345678';
+    
+    navigator.clipboard.writeText(fullAddress).then(() => {
+        const copyBtn = document.querySelector('.copy-btn');
+        const originalText = copyBtn.innerHTML;
+        
+        copyBtn.classList.add('copied');
+        copyBtn.innerHTML = '<span class="copy-icon">✅</span>';
+        
+        setTimeout(() => {
+            copyBtn.classList.remove('copied');
+            copyBtn.innerHTML = originalText;
+        }, 2000);
+        
+        showAchievement('Contract address copied! 📋');
+    }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = fullAddress;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        showAchievement('Contract address copied! 📋');
+    });
+}
+
 // Easter egg: Konami code
 let konamiCode = [];
 const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
@@ -253,9 +283,9 @@ document.addEventListener('keydown', (e) => {
     konamiCode = konamiCode.slice(-10);
     
     if (konamiCode.join(',') === konamiSequence.join(',')) {
-        gameState.clickCount += 100;
+        gameState.clickCount += 1000;
         updateDisplay();
-        showAchievement('Konami Code!');
+        showAchievement('🎮 KONAMI CODE ACTIVATED! +1000 clicks!');
     }
 });
 
