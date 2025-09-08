@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump Button</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">Pump Button</h1>
+            <p class="game-subtitle">Click the pump as much as possible!</p>
+        </header>
+
+        <main class="game-main">
+            <div class="score-section">
+                <div class="score-card">
+                    <span class="score-label">Total Clicks</span>
+                    <span class="score-number" id="clickCount">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">Clicks per Second</span>
+                    <span class="score-number" id="clicksPerSecond">0</span>
+                </div>
+            </div>
+
+            <div class="pump-section">
+                <div class="pump-wrapper">
+                    <button class="pump-button" id="pumpButton" aria-label="Click pump">
+                        <img src="pump.png" alt="Pompa" class="pump-image" id="pumpImage">
+                        <div class="click-effect" id="clickEffect">
+                            <span class="plus-one">+1</span>
+                        </div>
+                    </button>
+                    <div class="pump-shadow"></div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-text">Keep clicking for the next milestone!</p>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+            <div class="milestone-section">
+                <div class="milestone-item">
+                    <span class="milestone-icon">🏆</span>
+                    <span class="milestone-text">100 Clicks</span>
+                </div>
+                <div class="milestone-item">
+                    <span class="milestone-icon">🌟</span>
+                    <span class="milestone-text">500 Clicks</span>
+                </div>
+                <div class="milestone-item">
+                    <span class="milestone-icon">💎</span>
+                    <span class="milestone-text">1000 Clicks</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
